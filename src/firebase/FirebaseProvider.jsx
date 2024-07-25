@@ -57,7 +57,7 @@ const FirebaseProvider = ({ children }) => {
   };
 
   const setUserData = async (formData) => {
-    const userId = currentUser.uid;
+    const userId = auth.currentUser.uid;
 
     set(ref(database, "users/" + userId), {
       uid: userId,
